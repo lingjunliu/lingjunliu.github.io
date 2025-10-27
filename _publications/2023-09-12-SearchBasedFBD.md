@@ -2,7 +2,7 @@
 title: "Search-based Test Case Selection for PLC Systems using Functional Block Diagram Programs"
 collection: publications
 category: conferences
-permalink: https://ieeexplore.ieee.org/abstract/document/10301223
+link: https://ieeexplore.ieee.org/abstract/document/10301223
 excerpt: ''
 date: 2023-09-12
 year: 2023

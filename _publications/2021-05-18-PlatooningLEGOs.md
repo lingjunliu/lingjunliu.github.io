@@ -2,7 +2,7 @@
 title: "Platooning LEGOs: An Open Physical Exemplar for Engineering Self-Adaptive Cyber-Physical Systems-of-Systems"
 collection: publications
 category: conferences
-permalink: https://ieeexplore.ieee.org/abstract/document/9462025
+link: https://ieeexplore.ieee.org/abstract/document/9462025
 excerpt: ''
 date: 2021-05-18
 year: 2021

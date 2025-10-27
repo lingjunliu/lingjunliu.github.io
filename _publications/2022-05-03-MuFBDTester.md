@@ -2,7 +2,7 @@
 title: "MuFBDTester: A mutation‐based test sequence generator for FBD programs implementing nuclear power plant software"
 collection: publications
 category: journal
-permalink: https://doi.org/10.1002/stvr.1815
+link: https://doi.org/10.1002/stvr.1815
 excerpt: ''
 date: 2022-05-03
 year: 2022

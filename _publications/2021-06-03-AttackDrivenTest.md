@@ -2,7 +2,7 @@
 title: "Attack-driven Test Case Generation Approach using Model-checking Technique for Collaborating Systems"
 collection: publications
 category: workshops
-permalink: https://ieeexplore.ieee.org/abstract/document/9476060
+link: https://ieeexplore.ieee.org/abstract/document/9476060
 excerpt: ''
 date: 2021-06-03
 year: 2021
