@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lingjun Liu — Software Engineer</title>
+<meta name="description" content="Lingjun Liu builds tools that find bugs in compilers. PhD candidate at NC State, previously a software engineer at Suresoft Technologies. Seeking a Summer 2027 SWE internship.">
+<meta name="author" content="Lingjun Liu">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lingjun Liu — Software Engineer">
+<meta property="og:description" content="I build tools that find bugs in compilers. PhD candidate at NC State, previously a software engineer at Suresoft Technologies.">
+<meta property="og:url" content="https://lingjunliu.github.io/">
+<meta property="og:image" content="https://lingjunliu.github.io/images/profile.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/apple-touch-icon-180x180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">lingjun&nbsp;liu</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex; gap:8px;">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <img class="hero-photo" src="images/profile.png" alt="Lingjun Liu">
+      <div>
+        <span class="badge">Seeking Summer 2027 SWE internship</span>
+        <h1>Lingjun Liu</h1>
+        <p class="hero-tagline">I build tools that find bugs in compilers.</p>
+        <p class="hero-bio">
+          PhD candidate at NC State working on compiler testing and fuzzing, advised by
+          Prof. Tim Menzies. Previously a software engineer at Suresoft Technologies, shipping
+          static-analysis tooling for automotive C++. My work has surfaced 141 bugs across
+          GCC, LLVM, PyTorch, JAX, TensorFlow, and XLA.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="resume.pdf" target="_blank" rel="noopener">
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Résumé
+          </a>
+          <a class="btn btn--ghost" href="mailto:lingjunliu.se@gmail.com">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i> Get in touch
+          </a>
+        </div>
+
+        <div class="socials">
+          <a href="mailto:lingjunliu.se@gmail.com" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+          <a href="https://github.com/lingjunliu" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/lingjunliu" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://scholar.google.com/citations?user=JSZU1f0AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
+          <a href="https://orcid.org/0000-0001-6802-4090" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="metrics reveal">
+      <div class="metric">
+        <div class="metric-value">141</div>
+        <div class="metric-label">compiler bugs found</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">12</div>
+        <div class="metric-label">publications</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">5</div>
+        <div class="metric-label">awards &amp; fellowships</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">4.0</div>
+        <div class="metric-label">PhD GPA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section class="section section--alt" id="projects">
+  <div class="wrap">
+    <div class="section-label">01 — Projects</div>
+    <h2 class="section-title">Things I've built</h2>
+
+    <div class="cards">
+
+      <article class="card reveal">
+        <div class="card-head">
+          <h3 class="card-title">IssueMut</h3>
+          <span class="card-meta">MSR 2026</span>
+        </div>
+        <p class="card-body">
+          Compilers are hard to fuzz because random programs rarely reach interesting code paths.
+          IssueMut mines 1,760 historical GCC and LLVM bug reports into structured test-case pairs,
+          then runs a multi-agent LLM pipeline — generation, validation, and iterative-revision agents —
+          that synthesizes 587 fuzzing mutators from real past bugs. It found 65 new bugs, 60 of which
+          GCC and LLVM maintainers confirmed, fixed, or triaged.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">Gemini</span>
+          <span class="tag">GCC</span><span class="tag">LLVM</span><span class="tag">Fuzzing</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/ncsu-swat/IssueMut" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+          <a href="https://www.cs.cornell.edu/~legunsen/pubs/LiuETAlIssueMutMSR26.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Paper</a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-head">
+          <h3 class="card-title">Deep-learning compiler differential testing</h3>
+          <span class="card-meta">2024 — present</span>
+        </div>
+        <p class="card-body">
+          A differential-testing pipeline for deep-learning compilers that runs the same model through
+          multiple backends and flags divergent results. Parallelized with SLURM job scheduling so many
+          test campaigns run concurrently on a cluster. Found 76 bugs across PyTorch, JAX, TensorFlow,
+          and XLA, with 45 confirmed or fixed.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">SLURM</span><span class="tag">PyTorch</span>
+          <span class="tag">JAX</span><span class="tag">TensorFlow</span><span class="tag">XLA</span>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-head">
+          <h3 class="card-title">MuFBDTester</h3>
+          <span class="card-meta">STVR 2022</span>
+        </div>
+        <p class="card-body">
+          An automated test generator for a nuclear reactor protection system. It models Function Block
+          Diagram programs and their mutations as SMT constraints, then solves them with Yices to derive
+          test sequences. It detected 100% of real industrial faults, cut manual test-suite creation from
+          days to minutes, and ran 20× faster than leading structural-coverage tools.
+        </p>
+        <div class="tags">
+          <span class="tag">Java</span><span class="tag">Yices SMT</span>
+          <span class="tag">Mutation testing</span><span class="tag">Safety-critical</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/lingjunliu/MuFBDTester" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+          <a href="https://doi.org/10.1002/stvr.1815" target="_blank" rel="noopener"><i class="fa-solid fa-link" aria-hidden="true"></i> Paper</a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-head">
+          <h3 class="card-title">Platooning LEGOs</h3>
+          <span class="card-meta">SEAMS 2021 · Best Artifact</span>
+        </div>
+        <p class="card-body">
+          Research on self-adaptive vehicle platooning normally needs a fleet of real cars. This open
+          physical exemplar rebuilds the problem on LEGO hardware, so other researchers can reproduce
+          and extend platooning experiments cheaply. It won the SEAMS 2021 Best Artifact Award.
+        </p>
+        <div class="tags">
+          <span class="tag">Java</span><span class="tag">Cyber-physical systems</span>
+          <span class="tag">Self-adaptive systems</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/KAIST-SE-Lab/Platooning-LEGOs" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+          <a href="https://ieeexplore.ieee.org/abstract/document/9462025" target="_blank" rel="noopener"><i class="fa-solid fa-link" aria-hidden="true"></i> Paper</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <div class="section-label">02 — Experience</div>
+    <h2 class="section-title">Where I've worked</h2>
+
+    <div class="timeline">
+
+      <div class="job reveal">
+        <div class="job-head">
+          <div>
+            <div class="job-org">Suresoft Technologies Inc.</div>
+            <div class="job-role">Associate Research Engineer</div>
+            <div class="job-place">Seongnam, South Korea</div>
+          </div>
+          <div class="job-dates">Nov 2022 — Jul 2023</div>
+        </div>
+        <ul>
+          <li>Shipped production C++ rule checkers (AUTOSAR C++14) into a 200+ rule suite in a commercial static-analysis product used by paying customers; grew from new hire to core contributor within two months, raising rule-checker throughput roughly 3× (1–2/week to 5/week).</li>
+          <li>Built a backend license-validation service in Java Spring, enforcing time-limited licensing for commercial customers.</li>
+          <li>Designed and built a rule-description generator (Java Spring, MongoDB) with a REST API for frontend data retrieval, including the database schema.</li>
+          <li>Onboarded and mentored two incoming engineers through pair-programming code-preview sessions ahead of formal review.</li>
+          <li>Managed software packaging with Advanced Installer and partnered with QA to debug packaging-related test failures.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="job-head">
+          <div>
+            <div class="job-org">North Carolina State University</div>
+            <div class="job-role">Graduate Research Assistant</div>
+            <div class="job-place">Raleigh, NC</div>
+          </div>
+          <div class="job-dates">Aug 2024 — present</div>
+        </div>
+        <ul>
+          <li>Built a data pipeline that mines 1,760 historical GCC and LLVM bug reports into structured test-case pairs, powering IssueMut, a bug-detection framework for C compilers (MSR 2026).</li>
+          <li>Designed a multi-agent LLM pipeline (LangChain, Gemini) — generation, validation, and iterative-revision agents — to synthesize 587 fuzzing mutators from the mined test cases; found 65 bugs, 60 confirmed, fixed, or triaged by GCC and LLVM maintainers.</li>
+          <li>Co-led a differential-testing pipeline for deep-learning compilers, parallelized via SLURM to run multiple campaigns concurrently; found 76 bugs across PyTorch, JAX, TensorFlow, and XLA, 45 confirmed or fixed.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="job-head">
+          <div>
+            <div class="job-org">KAIST</div>
+            <div class="job-role">Full-time Researcher</div>
+            <div class="job-place">Daejeon, South Korea</div>
+          </div>
+          <div class="job-dates">Nov 2023 — Apr 2024 · Oct 2021 — Aug 2022</div>
+        </div>
+        <ul>
+          <li>Built the core reliability computation engine (Bayesian Belief Network modeling) for nuclear safety-critical software — prototyped in R with WinBUGS and Shiny, then migrated to PyMC.</li>
+          <li>Containerized a full-stack application (Next.js, FastAPI, MySQL) with Docker and Docker Compose, and wrote a one-command deployment script automating multi-container builds.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="job-head">
+          <div>
+            <div class="job-org">KAIST</div>
+            <div class="job-role">Graduate Research Assistant</div>
+            <div class="job-place">Daejeon, South Korea</div>
+          </div>
+          <div class="job-dates">Aug 2018 — Aug 2021</div>
+        </div>
+        <ul>
+          <li>Developed MuFBDTester, an automated test generator for a nuclear reactor protection system using mutation testing and SMT constraint solving with Yices; achieved 100% detection of real industrial faults, cut manual test-suite creation from days to minutes, and ran 20× faster than leading structural-coverage tools (STVR 2022).</li>
+          <li>Designed runtime verification property patterns and scopes, and built a verification checker for Mass Casualty Incident-Response systems.</li>
+          <li>Modeled attack scenarios on air traffic control systems with the JADE multi-agent framework and generated test cases via model checking.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section class="section section--alt" id="skills">
+  <div class="wrap">
+    <div class="section-label">03 — Skills</div>
+    <h2 class="section-title">What I work with</h2>
+
+    <div class="skill-group reveal">
+      <h3>Languages</h3>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">C++</span><span class="tag">Java</span><span class="tag">R</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal">
+      <h3>Tools &amp; frameworks</h3>
+      <div class="tags">
+        <span class="tag">Git</span><span class="tag">Docker</span><span class="tag">REST API</span>
+        <span class="tag">Java Spring</span><span class="tag">MongoDB</span><span class="tag">MySQL</span>
+        <span class="tag">FastAPI</span><span class="tag">Next.js</span><span class="tag">SLURM</span>
+        <span class="tag">Linux / Unix</span><span class="tag">LangChain</span>
+      </div>
+    </div>
+
+    <div class="skill-group reveal">
+      <h3>Testing &amp; systems</h3>
+      <div class="tags">
+        <span class="tag">Mutation testing</span><span class="tag">Differential testing</span>
+        <span class="tag">Fuzzing</span><span class="tag">Static analysis</span>
+        <span class="tag">SMT solvers (Yices, Z3)</span><span class="tag">CI / regression testing</span>
+        <span class="tag">Compilers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PUBLICATIONS ===================== -->
+<section class="section" id="publications">
+  <div class="wrap">
+    <div class="section-label">04 — Publications</div>
+    <h2 class="section-title">Selected papers</h2>
+
+    <div>
+      <div class="pub reveal">
+        <div class="pub-title">Learning Compiler Fuzzing Mutators from Historical Bugs</div>
+        <div class="pub-authors"><strong>Lingjun Liu</strong>, Feiran Qin, Owolabi Legunsen, Marcelo d'Amorim</div>
+        <div class="pub-venue">MSR 2026 · Mining Software Repositories</div>
+        <div class="pub-links">
+          <a href="https://www.cs.cornell.edu/~legunsen/pubs/LiuETAlIssueMutMSR26.pdf" target="_blank" rel="noopener">PDF</a>
+          <a href="https://github.com/ncsu-swat/IssueMut" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <div class="pub reveal">
+        <div class="pub-title">Search-based Test Case Selection for PLC Systems using Functional Block Diagram Programs</div>
+        <div class="pub-authors">Miriam Ugarte Querejeta, Eunkyoung Jee, <strong>Lingjun Liu</strong>, Pablo Valle, Aitor Arrieta, Miren Illarramendi Rezabal</div>
+        <div class="pub-venue">ISSRE 2023 · Software Reliability Engineering</div>
+        <div class="pub-links"><a href="https://doi.org/10.1109/ISSRE59848.2023.00040" target="_blank" rel="noopener">Paper</a></div>
+      </div>
+
+      <div class="pub reveal">
+        <div class="pub-title">MuFBDTester: A mutation-based test sequence generator for FBD programs implementing nuclear power plant software</div>
+        <div class="pub-authors"><strong>Lingjun Liu</strong>, Eunkyoung Jee, Doo-Hwan Bae</div>
+        <div class="pub-venue">STVR 2022 · Software Testing, Verification and Reliability</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1002/stvr.1815" target="_blank" rel="noopener">Paper</a>
+          <a href="https://github.com/lingjunliu/MuFBDTester" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <div class="pub reveal">
+        <div class="pub-title">An Empirical Study of Reliability Analysis for Platooning System-of-Systems</div>
+        <div class="pub-authors">Sangwon Hyun, <strong>Lingjun Liu</strong>, Hansu Kim, Esther Cho, Doo-Hwan Bae</div>
+        <div class="pub-venue">QRS-C 2021 · Software Quality, Reliability and Security</div>
+        <div class="pub-links"><a href="https://doi.org/10.1109/QRS-C55045.2021.00079" target="_blank" rel="noopener">Paper</a></div>
+      </div>
+
+      <div class="pub reveal">
+        <div class="pub-title">Attack-driven Test Case Generation Approach using Model-checking Technique for Collaborating Systems</div>
+        <div class="pub-authors">Zelalem Mihret, <strong>Lingjun Liu</strong></div>
+        <div class="pub-venue">EnCyCriS 2021 · Engineering and Cybersecurity of Critical Systems</div>
+        <div class="pub-links"><a href="https://doi.org/10.1109/EnCyCriS52570.2021.00008" target="_blank" rel="noopener">Paper</a></div>
+      </div>
+
+      <div class="pub reveal">
+        <div class="pub-title">Platooning LEGOs: An Open Physical Exemplar for Engineering Self-Adaptive Cyber-Physical Systems-of-Systems</div>
+        <div class="pub-authors">Yong-Jun Shin, <strong>Lingjun Liu</strong>, Sangwon Hyun, Doo-Hwan Bae</div>
+        <div class="pub-venue">SEAMS 2021 · Self-Managing Systems <span class="pub-award">Best Artifact</span></div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1109/SEAMS51251.2021.00038" target="_blank" rel="noopener">Paper</a>
+          <a href="https://github.com/KAIST-SE-Lab/Platooning-LEGOs" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="pubs-more">
+      <div class="pub">
+        <div class="pub-title">Development of Reliability Measurement Method and Tool for Nuclear Power Plant Safety Software</div>
+        <div class="pub-authors"><strong>Lingjun Liu</strong>, Wooyoung Choi, Eunkyoung Jee, Duksan Ryu</div>
+        <div class="pub-venue">TKIPS 2024 · Korea Information Processing Society</div>
+        <div class="pub-links"><a href="https://doi.org/10.3745/TKIPS.2024.13.5.227" target="_blank" rel="noopener">Paper</a></div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">A Reliability Evaluation Tool for Nuclear Power Plant Safety Software</div>
+        <div class="pub-authors"><strong>Lingjun Liu</strong>, Wooyoung Choi, Eunkyoung Jee, Duksan Ryu</div>
+        <div class="pub-venue">KCSE 2024 · Korea Conference on Software Engineering <span class="pub-award">Best Short Paper</span></div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">MuGenFBD: Automated Mutant Generator for Function Block Diagram Program</div>
+        <div class="pub-authors"><strong>Lingjun Liu</strong>, Eunkyoung Jee, Doo-Hwan Bae</div>
+        <div class="pub-venue">KTSDE 2021 · KIPS Transactions on Software and Data Engineering</div>
+        <div class="pub-links"><a href="https://doi.org/10.3745/KTSDE.2021.10.4.115" target="_blank" rel="noopener">Paper</a></div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">A Systematic Translation from PAT-based Counterexamples to Viable Test Cases</div>
+        <div class="pub-authors">Zelalem Mihret, <strong>Lingjun Liu</strong>, Eunkyoung Jee, Doo-Hwan Bae</div>
+        <div class="pub-venue">KCSE 2021 · Korea Conference on Software Engineering</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">Analysis of coupling effect hypothesis for function block diagram programs</div>
+        <div class="pub-authors"><strong>Lingjun Liu</strong>, Eunkyoung Jee, Doo-Hwan Bae</div>
+        <div class="pub-venue">KSC 2020 · Korea Software Congress</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">Automated mutant generation for function block diagram programs</div>
+        <div class="pub-authors"><strong>Lingjun Liu</strong>, Eunkyoung Jee, Doo-Hwan Bae</div>
+        <div class="pub-venue">KCSE 2020 · Korea Conference on Software Engineering <span class="pub-award">Outstanding Short Paper</span></div>
+      </div>
+    </div>
+
+    <button class="pubs-toggle" id="pubs-toggle" aria-expanded="false" aria-controls="pubs-more">
+      Show all 12 publications
+    </button>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION & AWARDS ===================== -->
+<section class="section section--alt" id="education">
+  <div class="wrap">
+    <div class="section-label">05 — Education</div>
+    <h2 class="section-title">Education &amp; awards</h2>
+
+    <div class="two-col">
+      <div class="reveal">
+        <div class="edu">
+          <div class="edu-school">North Carolina State University</div>
+          <div class="edu-degree">Ph.D. in Computer Science</div>
+          <div class="edu-meta">Aug 2024 — May 2028 (expected) · GPA 4.0 / 4.0</div>
+          <div class="edu-note">Advised by Prof. Tim Menzies</div>
+        </div>
+        <div class="edu">
+          <div class="edu-school">KAIST</div>
+          <div class="edu-degree">M.S. in Computer Science</div>
+          <div class="edu-meta">Sep 2019 — Aug 2021 · GPA 3.53 / 4.3</div>
+          <div class="edu-note">Advised by Prof. Doo-Hwan Bae</div>
+        </div>
+        <div class="edu">
+          <div class="edu-school">National Tsing Hua University</div>
+          <div class="edu-degree">B.S. in Computer Science</div>
+          <div class="edu-meta">Sep 2014 — Jun 2019 · GPA 3.75 / 4.3</div>
+          <div class="edu-note">Includes an exchange year in Computer Science at KAIST (Aug 2018 — Jun 2019)</div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <ul class="awards">
+          <li>University Graduate Fellowship at NCSU — top graduate student fellowship (2024)</li>
+          <li>Best Short Paper Award — Korea Conference on Software Engineering (2024)</li>
+          <li>Best Artifact Award — Symposium on Software Engineering for Adaptive and Self-Managing Systems (2021)</li>
+          <li>Outstanding Short Paper Award — Korea Conference on Software Engineering (2020)</li>
+          <li>KAIST Scholarship — merit-based full support (2019)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="section-label">06 — Contact</div>
+    <h2 class="section-title">Let's talk</h2>
+    <p class="contact-blurb">
+      I'm looking for a Summer 2027 software engineering internship, and I'm always happy to talk
+      about compilers, fuzzing, and testing infrastructure.
+    </p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a class="btn btn--primary" href="mailto:lingjunliu.se@gmail.com">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> lingjunliu.se@gmail.com
+      </a>
+    </div>
+    <div class="socials">
+      <a href="https://github.com/lingjunliu" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/lingjunliu" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+      <a href="https://scholar.google.com/citations?user=JSZU1f0AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
+      <a href="https://orcid.org/0000-0001-6802-4090" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a>
+      <a href="files/CV.pdf" target="_blank" rel="noopener" aria-label="Academic CV" title="Academic CV"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">© 2026 Lingjun Liu · Built from scratch, no template</div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
