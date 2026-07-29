@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lingjun Liu — Software Engineer</title>
-<meta name="description" content="Lingjun Liu builds tools that find bugs in compilers. PhD candidate at NC State, previously a software engineer at Suresoft Technologies. Seeking a Summer 2027 SWE internship.">
+<meta name="description" content="Lingjun Liu builds AI agents and tests whether they actually work. PhD student at NC State researching agentic AI for software engineering, previously a software engineer at Suresoft Technologies. Seeking a Summer 2027 SWE internship.">
 <meta name="author" content="Lingjun Liu">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Lingjun Liu — Software Engineer">
-<meta property="og:description" content="I build tools that find bugs in compilers. PhD candidate at NC State, previously a software engineer at Suresoft Technologies.">
+<meta property="og:description" content="I build AI agents, and I test whether they actually work. PhD student at NC State, previously a software engineer at Suresoft Technologies.">
 <meta property="og:url" content="https://lingjunliu.github.io/">
 <meta property="og:image" content="https://lingjunliu.github.io/images/profile.png">
 <meta name="twitter:card" content="summary">
@@ -60,12 +60,13 @@
       <div>
         <span class="badge">Seeking Summer 2027 SWE internship</span>
         <h1>Lingjun Liu</h1>
-        <p class="hero-tagline">I build tools that find bugs in compilers.</p>
+        <p class="hero-tagline">I build AI agents, and I test whether they actually work.</p>
         <p class="hero-bio">
-          PhD candidate at NC State working on compiler testing and fuzzing, advised by
-          Prof. Tim Menzies. Previously a software engineer at Suresoft Technologies, shipping
-          static-analysis tooling for automotive C++. My work has surfaced 141 bugs across
-          GCC, LLVM, PyTorch, JAX, TensorFlow, and XLA.
+          PhD student at NC State building and evaluating agentic AI systems for software
+          engineering, advised by Dr. Tim Menzies. I built IssueMut, a multi-agent LLM pipeline
+          that learned from 1,760 historical bug reports and found 65 real bugs in GCC and LLVM.
+          Now I'm studying how an agent's context shapes its performance. Before my PhD, I spent
+          a year at Suresoft Technologies shipping C++ static analysis into a commercial product.
         </p>
 
         <div class="hero-actions">
@@ -80,7 +81,7 @@
         <div class="socials">
           <a href="mailto:lingjunliu.se@gmail.com" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
           <a href="https://github.com/lingjunliu" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/lingjunliu" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/lingjun-liu-272256135" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
           <a href="https://scholar.google.com/citations?user=JSZU1f0AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
           <a href="https://orcid.org/0000-0001-6802-4090" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a>
         </div>
@@ -122,11 +123,12 @@
           <span class="card-meta">MSR 2026</span>
         </div>
         <p class="card-body">
-          Compilers are hard to fuzz because random programs rarely reach interesting code paths.
+          Random fuzzing rarely reaches the code paths where real compiler bugs live — but thousands of 
+          past bug reports show exactly which paths those are.
           IssueMut mines 1,760 historical GCC and LLVM bug reports into structured test-case pairs,
           then runs a multi-agent LLM pipeline — generation, validation, and iterative-revision agents —
           that synthesizes 587 fuzzing mutators from real past bugs. It found 65 new bugs, 60 of which
-          GCC and LLVM maintainers confirmed, fixed, or triaged.
+          GCC and LLVM maintainers confirmed or fixed.
         </p>
         <div class="tags">
           <span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">Gemini</span>
@@ -141,13 +143,15 @@
       <article class="card reveal">
         <div class="card-head">
           <h3 class="card-title">Deep-learning compiler differential testing</h3>
-          <span class="card-meta">2024 — present</span>
+          <span class="card-meta">2025 — present</span>
         </div>
         <p class="card-body">
-          A differential-testing pipeline for deep-learning compilers that runs the same model through
-          multiple backends and flags divergent results. Parallelized with SLURM job scheduling so many
-          test campaigns run concurrently on a cluster. Found 76 bugs across PyTorch, JAX, TensorFlow,
-          and XLA, with 45 confirmed or fixed.
+          Deep-learning compilers can silently diverge across execution modes and hardware — the same 
+          model may produce different results in eager vs. compiled mode, or on CPU vs. GPU. This pipeline 
+          fuzzes model graphs by generating API sequences, then differentially tests each graph 
+          across those settings to flag divergent results, parallelized via SLURM so many campaigns 
+          run concurrently on a cluster. It found 76 bugs across PyTorch, JAX, TensorFlow, and XLA, 
+          with 45 confirmed or fixed.
         </p>
         <div class="tags">
           <span class="tag">Python</span><span class="tag">SLURM</span><span class="tag">PyTorch</span>
@@ -164,7 +168,7 @@
           An automated test generator for a nuclear reactor protection system. It models Function Block
           Diagram programs and their mutations as SMT constraints, then solves them with Yices to derive
           test sequences. It detected 100% of real industrial faults, cut manual test-suite creation from
-          days to minutes, and ran 20× faster than leading structural-coverage tools.
+          days to minutes, and ran 20x faster than leading structural-coverage tools.
         </p>
         <div class="tags">
           <span class="tag">Java</span><span class="tag">Yices SMT</span>
@@ -182,9 +186,10 @@
           <span class="card-meta">SEAMS 2021 · Best Artifact</span>
         </div>
         <p class="card-body">
-          Research on self-adaptive vehicle platooning normally needs a fleet of real cars. This open
-          physical exemplar rebuilds the problem on LEGO hardware, so other researchers can reproduce
-          and extend platooning experiments cheaply. It won the SEAMS 2021 Best Artifact Award.
+          Research on self-adaptive systems normally relies on virtual simulations — there's a lack of 
+          physical testbeds to validate self-adaptive approaches in the real world. This open physical 
+          exemplar rebuilds the problem on LEGO hardware, so other researchers can reproduce and extend 
+          platooning experiments cheaply. It won the SEAMS 2021 Best Artifact Award.
         </p>
         <div class="tags">
           <span class="tag">Java</span><span class="tag">Cyber-physical systems</span>
@@ -229,22 +234,6 @@
       <div class="job reveal">
         <div class="job-head">
           <div>
-            <div class="job-org">North Carolina State University</div>
-            <div class="job-role">Graduate Research Assistant</div>
-            <div class="job-place">Raleigh, NC</div>
-          </div>
-          <div class="job-dates">Aug 2024 — present</div>
-        </div>
-        <ul>
-          <li>Built a data pipeline that mines 1,760 historical GCC and LLVM bug reports into structured test-case pairs, powering IssueMut, a bug-detection framework for C compilers (MSR 2026).</li>
-          <li>Designed a multi-agent LLM pipeline (LangChain, Gemini) — generation, validation, and iterative-revision agents — to synthesize 587 fuzzing mutators from the mined test cases; found 65 bugs, 60 confirmed, fixed, or triaged by GCC and LLVM maintainers.</li>
-          <li>Co-led a differential-testing pipeline for deep-learning compilers, parallelized via SLURM to run multiple campaigns concurrently; found 76 bugs across PyTorch, JAX, TensorFlow, and XLA, 45 confirmed or fixed.</li>
-        </ul>
-      </div>
-
-      <div class="job reveal">
-        <div class="job-head">
-          <div>
             <div class="job-org">KAIST</div>
             <div class="job-role">Full-time Researcher</div>
             <div class="job-place">Daejeon, South Korea</div>
@@ -254,22 +243,6 @@
         <ul>
           <li>Built the core reliability computation engine (Bayesian Belief Network modeling) for nuclear safety-critical software — prototyped in R with WinBUGS and Shiny, then migrated to PyMC.</li>
           <li>Containerized a full-stack application (Next.js, FastAPI, MySQL) with Docker and Docker Compose, and wrote a one-command deployment script automating multi-container builds.</li>
-        </ul>
-      </div>
-
-      <div class="job reveal">
-        <div class="job-head">
-          <div>
-            <div class="job-org">KAIST</div>
-            <div class="job-role">Graduate Research Assistant</div>
-            <div class="job-place">Daejeon, South Korea</div>
-          </div>
-          <div class="job-dates">Aug 2018 — Aug 2021</div>
-        </div>
-        <ul>
-          <li>Developed MuFBDTester, an automated test generator for a nuclear reactor protection system using mutation testing and SMT constraint solving with Yices; achieved 100% detection of real industrial faults, cut manual test-suite creation from days to minutes, and ran 20× faster than leading structural-coverage tools (STVR 2022).</li>
-          <li>Designed runtime verification property patterns and scopes, and built a verification checker for Mass Casualty Incident-Response systems.</li>
-          <li>Modeled attack scenarios on air traffic control systems with the JADE multi-agent framework and generated test cases via model checking.</li>
         </ul>
       </div>
 
@@ -429,13 +402,13 @@
           <div class="edu-school">North Carolina State University</div>
           <div class="edu-degree">Ph.D. in Computer Science</div>
           <div class="edu-meta">Aug 2024 — May 2028 (expected) · GPA 4.0 / 4.0</div>
-          <div class="edu-note">Advised by Prof. Tim Menzies</div>
+          <div class="edu-note">Advised by Dr. Tim Menzies</div>
         </div>
         <div class="edu">
           <div class="edu-school">KAIST</div>
           <div class="edu-degree">M.S. in Computer Science</div>
           <div class="edu-meta">Sep 2019 — Aug 2021 · GPA 3.53 / 4.3</div>
-          <div class="edu-note">Advised by Prof. Doo-Hwan Bae</div>
+          <div class="edu-note">Advised by Dr. Doo-Hwan Bae</div>
         </div>
         <div class="edu">
           <div class="edu-school">National Tsing Hua University</div>
@@ -465,7 +438,7 @@
     <h2 class="section-title">Let's talk</h2>
     <p class="contact-blurb">
       I'm looking for a Summer 2027 software engineering internship, and I'm always happy to talk
-      about compilers, fuzzing, and testing infrastructure.
+      about agentic AI and software testing.
     </p>
     <div class="hero-actions" style="justify-content:center;">
       <a class="btn btn--primary" href="mailto:lingjunliu.se@gmail.com">
@@ -474,7 +447,7 @@
     </div>
     <div class="socials">
       <a href="https://github.com/lingjunliu" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-      <a href="https://www.linkedin.com/in/lingjunliu" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/lingjun-liu-272256135" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
       <a href="https://scholar.google.com/citations?user=JSZU1f0AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
       <a href="https://orcid.org/0000-0001-6802-4090" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fa-brands fa-orcid" aria-hidden="true"></i></a>
       <a href="files/CV.pdf" target="_blank" rel="noopener" aria-label="Academic CV" title="Academic CV"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></a>
@@ -485,7 +458,7 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap">© 2026 Lingjun Liu · Built from scratch, no template</div>
+  <div class="wrap">© 2026 Lingjun Liu</div>
 </footer>
 
 <script src="assets/main.js"></script>
